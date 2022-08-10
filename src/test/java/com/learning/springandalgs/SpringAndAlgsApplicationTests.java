@@ -1,4 +1,4 @@
-package com.example.springandalgs;
+package com.learning.springandalgs;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

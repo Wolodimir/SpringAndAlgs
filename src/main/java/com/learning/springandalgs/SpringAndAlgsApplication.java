@@ -1,4 +1,4 @@
-package com.example.springandalgs;
+package com.learning.springandalgs;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

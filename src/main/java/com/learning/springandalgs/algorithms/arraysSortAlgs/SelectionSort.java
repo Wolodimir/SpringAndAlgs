@@ -2,8 +2,9 @@ package com.learning.springandalgs.algorithms.arraysSortAlgs;
 
 public class SelectionSort {
 
-    public static void sort(int[] array) {
+    public static long sort(int[] array) {
         int ind = 0;
+        long k = 0;
         for (int i = 0; i < array.length; i++) {
             int min = array[i];
             for (int j = i; j < array.length; j++) {
@@ -15,8 +16,10 @@ public class SelectionSort {
                     int temp = array[i];
                     array[i] = array[ind];
                     array[ind] = temp;
+                    k++;
                 }
             }
         }
+        return k;
     }
 }

@@ -1,5 +1,6 @@
 package com.learning.springandalgs.controller;
 
+import com.learning.springandalgs.dto.WorkReportDto;
 import com.learning.springandalgs.service.ArraysSortService;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +18,12 @@ public class ArraysSortController {
     }
 
     @PostMapping("/bubble")
-    public String bubbleSort(@RequestParam Integer length) {
-        return arraysSortService.bubbleSort(length).toString();
+    public Long bubbleSort(@RequestParam Integer length) {
+        return arraysSortService.bubbleSort(length);
+    }
+
+    @PostMapping("/selection")
+    public WorkReportDto selectionSort(@RequestParam Integer length) {
+        return arraysSortService.selectionSort(length);
     }
 }

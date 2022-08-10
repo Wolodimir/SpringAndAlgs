@@ -11,6 +11,9 @@ public class ArraysSortService {
         for (int i = 0; i < arr.length; i++) {
             arr[i] = (int) (Math.random() * 1000);
         }
-        return BubbleSort.sort(arr);
+        long startTime = System.currentTimeMillis();
+        long swaps = BubbleSort.sort(arr);
+        System.out.println((System.currentTimeMillis() - startTime) / 1000);
+        return swaps;
     }
 }

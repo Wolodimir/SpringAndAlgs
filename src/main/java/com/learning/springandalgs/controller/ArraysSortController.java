@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("sort")
 public class ArraysSortController {
 
-    private ArraysSortService arraysSortService;
+    private final ArraysSortService arraysSortService;
 
     public ArraysSortController(ArraysSortService arraysSortService) {
         this.arraysSortService = arraysSortService;
     }
 
     @PostMapping("/bubble")
-    public Long bubbleSort(@RequestParam Integer length) {
+    public WorkReportDto bubbleSort(@RequestParam Integer length) {
         return arraysSortService.bubbleSort(length);
     }
 

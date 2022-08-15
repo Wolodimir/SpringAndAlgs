@@ -8,9 +8,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ArraysSortServiceTest {
 
-    public ArraysSortServiceTest(ArraysSortService arraysSortService) {
-    }
-
     @Test
     void bubbleSort() {
     }

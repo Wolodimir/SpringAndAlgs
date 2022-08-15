@@ -26,4 +26,9 @@ public class ArraysSortController {
     public WorkReportDto selectionSort(@RequestParam Integer length) {
         return arraysSortService.selectionSort(length);
     }
+
+    @PostMapping("/insertion")
+    public WorkReportDto insertionSort(@RequestParam Integer length) {
+        return arraysSortService.insertionSort(length);
+    }
 }

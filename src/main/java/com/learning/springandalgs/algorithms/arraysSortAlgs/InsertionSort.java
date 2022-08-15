@@ -2,18 +2,16 @@ package com.learning.springandalgs.algorithms.arraysSortAlgs;
 
 public class InsertionSort {
     public static long sort(int[] array) {
+        int in, out;
         long k = 0;
-        for (int left = 0; left < array.length; left++) {
-            int value = array[left];
-            int i = left - 1;
-            for (; i >= 0; i--) {
-                if (value < array[i]) {
-                    array[i + 1] = array[i];
-                } else {
-                    break;
-                }
+        for (out = 1; out < array.length; out++) {
+            int temp = array[out];
+            in = out;
+            while (in > 0 && array[in - 1] >= temp) {
+                array[in] = array[in - 1];
+                --in;
             }
-            array[i + 1] = value;
+            array[in] = temp;
             k++;
         }
         return k;

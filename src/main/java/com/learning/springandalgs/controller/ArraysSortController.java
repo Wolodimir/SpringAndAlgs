@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("sort")
+@RequestMapping("interaction/sort")
 public class ArraysSortController {
 
     private final ArraysSortService arraysSortService;

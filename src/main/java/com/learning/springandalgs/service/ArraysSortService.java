@@ -3,6 +3,7 @@ package com.learning.springandalgs.service;
 import com.learning.springandalgs.algorithms.arraysSortAlgs.BubbleSort;
 import com.learning.springandalgs.algorithms.arraysSortAlgs.InsertionSort;
 import com.learning.springandalgs.algorithms.arraysSortAlgs.SelectionSort;
+import com.learning.springandalgs.algorithms.arraysSortAlgs.ShellSort;
 import com.learning.springandalgs.dto.WorkReportDto;
 import org.springframework.stereotype.Service;
 
@@ -33,6 +34,16 @@ public class ArraysSortService {
         int[] arr = createRandomArray(length);
         long startTime = System.currentTimeMillis();
         long swaps = InsertionSort.sort(arr);
+        WorkReportDto report = new WorkReportDto();
+        report.time = (System.currentTimeMillis() - startTime) / 1000;
+        report.swaps = swaps; //make builder
+        return report;
+    }
+
+    public WorkReportDto shellSort(int length) {
+        int[] arr = createRandomArray(length);
+        long startTime = System.currentTimeMillis();
+        long swaps = ShellSort.sort(arr);
         WorkReportDto report = new WorkReportDto();
         report.time = (System.currentTimeMillis() - startTime) / 1000;
         report.swaps = swaps; //make builder

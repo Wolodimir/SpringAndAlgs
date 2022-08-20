@@ -31,4 +31,9 @@ public class ArraysSortController {
     public WorkReportDto insertionSort(@RequestParam Integer length) {
         return arraysSortService.insertionSort(length);
     }
+
+    @PostMapping("/shell")
+    public WorkReportDto shellSort(@RequestParam Integer length) {
+        return arraysSortService.shellSort(length);
+    }
 }
